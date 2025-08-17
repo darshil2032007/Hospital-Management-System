@@ -1,0 +1,118 @@
+/* Background with overlay */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("images/hospital_bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* lighter overlay */
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background: #0066cc;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-img {
+  width: 150px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Tables */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #0066cc;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
+  transition: background 0.3s ease;
+}
+
+/* Footer */
+footer {
+  background: #0066cc;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
